@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Periodic Table</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .periodic-table {
+            display: grid;
+            grid-template-columns: repeat(18, 60px);
+            grid-auto-rows: 60px;
+            gap: 2px;
+            justify-content: center;
+        }
+        .element {
+            border: 1px solid #000;
+            text-align: center;
+            font-size: 0.8em;
+            line-height: 1.5;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        /* Different colors for element categories */
+        .nonmetal { background-color: #f8d7da; }
+        .alkali-metal { background-color: #d6d8ff; }
+        .alkaline-earth { background-color: #cfe2ff; }
+        .transition-metal { background-color: #ffe69b; }
+        .metalloid { background-color: #e2e3e5; }
+        .halogen { background-color: #c3e6cb; }
+        .noble-gas { background-color: #b8daff; }
+        /* Position each element in the grid */
+        .hydrogen { grid-column: 1; grid-row: 1; }
+        .helium { grid-column: 18; grid-row: 1; }
+        .lithium { grid-column: 1; grid-row: 2; }
+        .beryllium { grid-column: 2; grid-row: 2; }
+        /* Add more elements here with correct positions */
+    </style>
+</head>
+<body>
+    <h1>The Periodic Table</h1>
+    <div class="periodic-table">
+        <div class="element nonmetal hydrogen">H<br>1</div>
+        <div class="element noble-gas helium">He<br>2</div>
+        <div class="element alkali-metal lithium">Li<br>3</div>
+        <div class="element alkaline-earth beryllium">Be<br>4</div>
+        <!-- Continue adding other elements with appropriate classes and positions -->
+    </div>
+</body>
+</html>
